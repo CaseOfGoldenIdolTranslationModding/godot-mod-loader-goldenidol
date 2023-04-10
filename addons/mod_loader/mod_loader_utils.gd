@@ -264,13 +264,13 @@ static func fix_godot_cmdline_args_string_space_splitting(args: PoolStringArray)
 
 # Returns the current time as a string in the format hh:mm:ss
 static func get_time_string() -> String:
-	var date_time = Time.get_datetime_dict_from_system()
+	var date_time = OS.get_datetime()
 	return "%02d:%02d:%02d" % [ date_time.hour, date_time.minute, date_time.second ]
 
 
 # Returns the current date as a string in the format yyyy-mm-dd
 static func get_date_string() -> String:
-	var date_time = Time.get_datetime_dict_from_system()
+	var date_time = OS.get_datetime()
 	return "%s-%02d-%02d" % [ date_time.year, date_time.month, date_time.day ]
 
 
